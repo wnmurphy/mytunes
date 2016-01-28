@@ -10,7 +10,7 @@ var AppView = Backbone.View.extend({
     this.model.on('change:currentSong', function(model){
       this.playerView.setSong(model.get('currentSong'));
     }, this);
-  },
+  }, 
 
   render: function(){
     return this.$el.html([
@@ -20,3 +20,7 @@ var AppView = Backbone.View.extend({
   }
 
 });
+
+// Create a new instance of PlayerView, and get the currentSong from AppModel.
+// Create a new instance of LibraryView, and get the library (SongQueue) from AppModel.
+// Display playerView.$el and libraryView.$el.

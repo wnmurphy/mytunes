@@ -9,3 +9,6 @@ var SongQueueView = Backbone.View.extend({
   }
 
 });
+
+
+// Create basic display for playlist

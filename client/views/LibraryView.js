@@ -20,3 +20,7 @@ var LibraryView = Backbone.View.extend({
   }
 
 });
+// Render everything underneath the player
+// Creates a table to display a LibraryEntryView for each song.
+// Calls LibraryEntryView for each song in sollection.
+  // For each, adds a table row with artist, song, and click event listener to play.
