@@ -13,17 +13,23 @@ var SongQueue = Songs.extend({
     // Listen for 'dequeue' on any song in songQueue, and dequeue from songQueue
     this.on('ended', function(song){
       this.shift();
-      this.playFirst();
+      if(this.length){
+        this.playFirst();
+      }
     }, this);
 
      this.on('dequeue', function(song){
       this.shift();
-      this.playFirst();
+      if(this.length){
+        this.playFirst();
+      }
     }, this);
   },
 
   playFirst: function(){
-    this.at(0).play();
+    if(this.length){
+      this.at(0).play();
+    }
   }
 
 });

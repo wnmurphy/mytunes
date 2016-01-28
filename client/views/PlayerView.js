@@ -20,7 +20,6 @@ var PlayerView = Backbone.View.extend({
   events: {
     'ended': function() {
       this.model.ended();
-      //remove it from the queue??
     }
   }
 
